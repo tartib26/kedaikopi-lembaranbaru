@@ -29,3 +29,61 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+//Aktifkan Search Form
+const searchForm = document.querySelector(".search-form");
+const tombolSearch = document.querySelector("#search");
+
+tombolSearch.onclick = (event) => {
+  event.preventDefault();
+  searchForm.classList.toggle("active");
+};
+
+// Hilangkan Search Form
+document.addEventListener("click", function (e) {
+  if (!tombolSearch.contains(e.target) && !searchForm.contains(e.target)) {
+    searchForm.classList.remove("active");
+  }
+});
+
+// Aktifkan Shopping Cart
+const shoppingCart = document.querySelector(".shopping-cart");
+const keranjang = document.querySelector('#keranjang');
+
+keranjang.onclick = (event) => {
+  event.preventDefault();
+  shoppingCart.classList.toggle("active");
+};
+
+// Hilangkan Shopping Cart
+document.addEventListener("click", function (e) {
+  if (!keranjang.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("active");
+  }
+});
+
+// Modal Box
+const itemDetailModal = document.querySelector('#item-detail-modal');
+const tombolDetail = document.querySelectorAll('.item-detail-button');
+
+
+
+tombolDetail.forEach ((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal.style.display = 'flex';
+  e.preventDefault();
+};
+});
+
+const closeModal = document.querySelector('.close-icon');
+closeModal.onclick = (e) => {
+  itemDetailModal.style.display = 'none';
+  e.preventDefault();
+}
+
+
+window.onclick = (e) => {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display ='none';
+  }
+}
