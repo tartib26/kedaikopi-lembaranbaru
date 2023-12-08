@@ -648,6 +648,7 @@ color: red;
   }
   .modal-content {
     flex-wrap: wrap;
+    width: 100%;
   }
   /* Contoh penyesuaian ukuran font untuk layar smartphone */
   /* }
