@@ -16,6 +16,7 @@
 
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
+const navLinks = document.querySelectorAll(".navbar-nav a");
 
 // hamburger menu diKlik
 hamburger.onclick = (event) => {
@@ -30,6 +31,11 @@ document.addEventListener("click", function (e) {
   }
 });
 
+navLinks.forEach(function (navLink) {
+  navLink.addEventListener("click", function () {
+    navbarNav.classList.remove("active");
+  });
+});
 //Aktifkan Search Form
 const searchForm = document.querySelector(".search-form");
 const tombolSearch = document.querySelector("#search");
@@ -48,7 +54,7 @@ document.addEventListener("click", function (e) {
 
 // Aktifkan Shopping Cart
 const shoppingCart = document.querySelector(".shopping-cart");
-const keranjang = document.querySelector('#keranjang');
+const keranjang = document.querySelector("#keranjang");
 
 keranjang.onclick = (event) => {
   event.preventDefault();
@@ -63,27 +69,24 @@ document.addEventListener("click", function (e) {
 });
 
 // Modal Box
-const itemDetailModal = document.querySelector('#item-detail-modal');
-const tombolDetail = document.querySelectorAll('.item-detail-button');
+const itemDetailModal = document.querySelector("#item-detail-modal");
+const tombolDetail = document.querySelectorAll(".item-detail-button");
 
-
-
-tombolDetail.forEach ((btn) => {
+tombolDetail.forEach((btn) => {
   btn.onclick = (e) => {
-    itemDetailModal.style.display = 'flex';
-  e.preventDefault();
-};
+    itemDetailModal.style.display = "flex";
+    e.preventDefault();
+  };
 });
 
-const closeModal = document.querySelector('.close-icon');
+const closeModal = document.querySelector(".close-icon");
 closeModal.onclick = (e) => {
-  itemDetailModal.style.display = 'none';
+  itemDetailModal.style.display = "none";
   e.preventDefault();
-}
-
+};
 
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
-    itemDetailModal.style.display ='none';
+    itemDetailModal.style.display = "none";
   }
-}
+};
