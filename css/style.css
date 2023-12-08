@@ -641,7 +641,7 @@ color: red;
 
 /* Smartphone */
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   /* Gaya CSS untuk layar smartphone */
   html {
     font-size: 55%;
