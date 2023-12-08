@@ -643,76 +643,13 @@ color: red;
 
 @media only screen and (max-width: 767px) {
   /* Gaya CSS untuk layar smartphone */
-  html {
+  html, body {
     font-size: 55%;
+    overflow-x: hidden;
   }
   .modal-content {
     flex-wrap: wrap;
     width: 100%;
   }
-  /* Contoh penyesuaian ukuran font untuk layar smartphone */
-  /* }
-
-   .modal-content {
-    flex-wrap: wrap;
-  }
-
-  #hamburger-menu {
-    display: inline-block;
-  }
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-nav a {
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
-
-  .about .row {
-    flex-wrap: wrap;
-  }
-
-  .about .row .about-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-position: center;
-  }
-  .about .row .content {
-    padding: 0;
-  }
-
-  .about .row .content h3 {
-    margin-top: 1.6rem;
-    font-size: 2rem;
-  }
-
-  .menu p {
-    font-size: 1.2rem;
-  }
-
-  .contact .row {
-    flex-wrap: wrap;
-  } */
+ 
 }
