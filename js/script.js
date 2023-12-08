@@ -1,18 +1,7 @@
 // Toggle class active
 // const navbarNav = document.querySelector(".navbar-nav");
 
-// // hamburger menu diKlik
-// document.querySelector("#hamburger-menu").onclick = () => {
-//   navbarNav.classList.toggle("active");
-// };
 
-// // Klik hilangkan Nav
-// const hamburger = document.querySelector("#hamburger-menu");
-// document.addEventListener("click", function (e) {
-//   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-//     navbarNav.classList.remove("active");
-//   }
-// });
 
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
@@ -33,6 +22,20 @@ document.addEventListener("click", function (e) {
 
 navLinks.forEach(function (navLink) {
   navLink.addEventListener("click", function () {
+    navbarNav.classList.remove("active");
+  });
+});
+
+// Tangani event sentuh pada perangkat sentuh (smartphone)
+document.addEventListener("touchstart", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
+
+navLinks.forEach(function (navLink) {
+  // Tangani event sentuh pada perangkat sentuh (smartphone)
+  navLink.addEventListener("touchstart", function () {
     navbarNav.classList.remove("active");
   });
 });
