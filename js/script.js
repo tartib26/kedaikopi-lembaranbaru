@@ -26,19 +26,19 @@ navLinks.forEach(function (navLink) {
   });
 });
 
-// Tangani event sentuh pada perangkat sentuh (smartphone)
-document.addEventListener("touchstart", function (e) {
-  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
-  }
-});
+// // Tangani event sentuh pada perangkat sentuh (smartphone)
+// document.addEventListener("touchstart", function (e) {
+//   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+//     navbarNav.classList.remove("active");
+//   }
+// });
 
-navLinks.forEach(function (navLink) {
-  // Tangani event sentuh pada perangkat sentuh (smartphone)
-  navLink.addEventListener("touchstart", function () {
-    navbarNav.classList.remove("active");
-  });
-});
+// navLinks.forEach(function (navLink) {
+//   // Tangani event sentuh pada perangkat sentuh (smartphone)
+//   navLink.addEventListener("touchstart", function () {
+//     navbarNav.classList.remove("active");
+//   });
+// });
 //Aktifkan Search Form
 const searchForm = document.querySelector(".search-form");
 const tombolSearch = document.querySelector("#search");
